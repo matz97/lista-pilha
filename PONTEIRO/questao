@@ -1,0 +1,166 @@
+1. Explique com suas palavras o que e um ponteiro em programacao.
+Um ponteiro é uma variável que armazena o endereço de memória de outra variável.
+Ele permite acessar ou modificar valores indiretamente.
+
+2. O que significa armazenar o endereço de memória?
+Significa que a variável não guarda o valor diretamente, mas sim a localização onde o valor está armazenado na memória do computador.
+int numero = 10;
+int *p = &numero;
+
+3. Python possui ponteiros como C?
+Python não possui ponteiros explícitos como C.
+
+Python trabalha com referências a objetos.
+As variáveis armazenam referências para objetos na memória.
+
+4. Criando duas variáveis
+numero = 10
+referencia = numero
+
+print(numero)
+print(referencia)
+
+5. Alterando numero
+numero = 10
+referencia = numero
+
+numero = 20
+
+6. Lista com referência
+valores = [1, 2, 3]
+
+ponteiro_lista = valores
+
+ponteiro_lista[0] = 100
+
+print(valores)
+
+7. Por que listas podem apontar para o mesmo objeto?
+
+Porque listas são objetos mutáveis.
+Duas variáveis podem guardar referência para a mesma lista na memória.
+
+8. Usando id()
+lista1 = [1, 2, 3]
+lista2 = lista1
+
+print(id(lista1))
+print(id(lista2))
+
+9. Listas iguais são o mesmo objeto?
+lista1 = [1, 2, 3]
+lista2 = [1, 2, 3]
+
+print(id(lista1))
+print(id(lista2))
+
+10. Diferença entre == e is
+== compara valores
+is compara referências (mesmo objeto)
+
+11. Comparando == e is
+lista1 = [1, 2, 3]
+lista2 = [1, 2, 3]
+lista3 = lista1
+
+print(lista1 == lista2)
+print(lista1 is lista2)
+
+print(lista1 == lista3)
+print(lista1 is lista3)
+
+12. Função alterar_lista
+def alterar_lista(lista):
+    lista.append(100)
+
+numeros = [1, 2, 3]
+
+alterar_lista(numeros)
+
+print(numeros)
+
+13. Função alterar_numero
+def alterar_numero(numero):
+    numero = 50
+
+x = 10
+
+alterar_numero(x)
+
+print(x)
+
+14. Por que objetos mutáveis podem ser alterados?
+
+Porque listas e dicionários permitem mudanças internas sem criar um novo objeto.
+
+15. Por que objetos imutáveis não mudam?
+
+Porque inteiros, strings e tuplas não permitem alteração direta.
+Qualquer mudança cria um novo objeto.
+
+16. Dicionário com referência
+aluno = {
+    "nome": "Carlos",
+    "idade": 20
+}
+
+referencia_aluno = aluno
+
+referencia_aluno["idade"] = 25
+
+print(aluno)
+
+17. Usando copy()
+lista1 = [1, 2, 3]
+
+lista2 = lista1.copy()
+
+lista2[0] = 100
+
+print(lista1)
+print(lista2)
+
+18. Lista dentro de lista
+lista1 = [[1, 2], [3, 4]]
+
+lista2 = lista1.copy()
+
+lista2[0][0] = 999
+
+print(lista1)
+print(lista2)
+
+19. Cópia rasa e profunda
+Cópia rasa (shallow copy)
+
+Copia apenas a lista principal.
+
+Cópia profunda (deep copy)
+
+Copia todos os elementos internos.
+
+import copy
+
+lista1 = [[1, 2], [3, 4]]
+
+copia_rasa = copy.copy(lista1)
+copia_profunda = copy.deepcopy(lista1)
+
+lista1[0][0] = 999
+
+print(copia_rasa)
+print(copia_profunda)
+
+20. Simulando ponteiros em Python
+
+lista = [10, 20, 30]
+
+ponteiro1 = lista
+ponteiro2 = lista
+
+ponteiro1[1] = 999
+
+print(ponteiro2)
+
+print(numero)
+print(referencia)
